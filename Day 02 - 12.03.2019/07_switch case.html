@@ -2,20 +2,33 @@
 <html lang="en">
 <head>
  <script>
-     /*
-     Class task:
-     _____________________________________
+    /*
+        Class task:
+        _____________________________________
 
-     get from the student his grade (1-100)
-     print him a text description for the grade:
-        100 = "Best"
-        90-100 = "Very Good"
-        70-90 = "Good"
-        50-70 = "Ok"
-        1-50 = "Try Again"
+        get from the student his grade (1-100)
+        print him a text description for the grade:
+            100 = "Best"
+            90-100 = "Very Good"
+            70-90 = "Good"
+            50-70 = "Ok"
+            1-50 = "Try Again"
 
-     Note: use switch case to write the result (5 cases)
-  */
+        Note: use switch case to write the result 
+    */
+
+    var grade=Number(prompt("Enter num 1-100"));
+
+    switch(Math.floor(grade/10)){
+        case 10: alert("Best"); break;
+        case 9: alert("Very Good"); break;
+        case 8: 
+        case 7: alert("Good"); break;
+        case 6: 
+        case 5: alert("Ok"); break;
+
+        default: alert("Try Again");
+    }
     </script>
 </head>
 <body>
