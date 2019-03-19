@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        // dont print "1" and stop running when counter is "3"
+
+        var lim=4;
+        var counter=0;
+
+        while(counter<lim){
+            counter++;
+
+            if(counter==1){
+                continue; 
+            }
+            else if(counter==3){
+                break;
+            }
+            console.log(`iteration number: ${counter}`);
+            
+        }
+
+        console.log(`after loop counter is: ${counter}`);
+
+
+        /*
+        OUTPUT:
+        ___________________
+        iteration number: 2
+        after loop counter is: 3
+        */
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
