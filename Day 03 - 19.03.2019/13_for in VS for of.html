@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+       
+    var arr=["a","b","c"];
+    
+    
+    console.log("----------for-in----------")
+    for(var e1 in arr){
+        arr[e1]="A";
+    }
+    console.log(arr);
+
+    console.log("----------for-of----------")
+    for(var e2 of arr){
+        e2="B";
+    }
+    console.log(arr);
+
+    /*
+    OUTPUT:
+    ______________________
+    ----------for-in----------
+    ["A", "A", "A"]
+    ----------for-of----------
+    ["A", "A", "A"]
+    
+    
+    */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

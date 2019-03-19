@@ -3,10 +3,48 @@
 <head>
     <script>
         var arr=["a","b","c"];
-        
 
         //loop over the array in 3 ways: while, do-while, for 
-        // and in each iteration print the element content and elemnt index
+        //and in each iteration print the element content and elemnt index
+
+        console.log("-----------------while-------------------")
+        var counter1=0;
+        while(counter1<arr.length){
+            console.log(`index: ${counter1}, contains: ${arr[counter1]}`);
+            counter1++;
+        }
+
+        console.log("-----------------do-while-------------------")
+        var counter2=0;
+        do{
+            console.log(`index: ${counter2}, contains: ${arr[counter2]}`);
+            counter2++;
+        }while(counter2<arr.length);
+
+
+        console.log("-----------------for-------------------")
+        for(var counter3=0;counter3<arr.length;counter3++){
+            console.log(`index: ${counter3}, contains: ${arr[counter3]}`)
+        }
+
+
+        /*
+        OUTPUT:
+        _________________________
+        -----------------while-------------------
+        index: 0, contains: a
+        index: 1, contains: b
+        index: 2, contains: c
+        -----------------do-while-------------------
+        index: 0, contains: a
+        index: 1, contains: b
+        index: 2, contains: c
+        -----------------for-------------------
+        index: 0, contains: a
+        index: 1, contains: b
+        index: 2, contains: c
+        
+        */
     </script>
 </head>
 <body>
