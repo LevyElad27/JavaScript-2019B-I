@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // value types: boolean , number
+        // ref type: array
+        function changeVal(p){
+            p=6;
+        }
+
+        function changeRef(p){
+            p[0]=6;
+        }
+        
+        var x=4;
+        console.log(`x before func: ${x}`);  //--> x before func: 4
+        changeVal(x);
+        console.log(`x after func: ${x}`);  //--> x after func: 4
+
+        var y=[1,2,3];
+        console.log(`y before func: ${y}`);  //--> y before func: 1,2,3
+        changeRef(y);
+        console.log(`y after func: ${y}`);   //--> y after func: 6,2,3
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

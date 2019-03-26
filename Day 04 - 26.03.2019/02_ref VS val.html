@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        // value types: boolean , number
+        // ref type: array
+        var x=4;
+        var y=x;
+
+        var z=[1,2,3];
+        var w=z;
+
+
+        x=3;
+        console.log(`x: ${x}, y: ${y}`);  //--> x: 3, y: 4
+
+        z[0]=8;
+        console.log(`z: ${z}, w: ${w}`);  //--> z: 8,2,3, w: 8,2,3
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

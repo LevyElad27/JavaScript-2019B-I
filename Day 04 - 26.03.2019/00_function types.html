@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        //**************************CALL FUNCTIONS***********************************
+        var res1=f1();
+        console.log(`f1 returned: ${res1}`);
+
+        var res2=f2();
+        console.log(`f2 returned: ${res2}`);
+
+        var res3=f3(4);
+        console.log(`f3 returned: ${res3}`);
+
+        var res4=f4(5);
+        console.log(`f4 returned: ${res4}`);
+
+        //**************************DECLARE FUNCTIONS***********************************
+        /* function that does not get parameters - and does not return value */
+        function f1() {
+            console.log(`I am f1`);
+        }
+
+
+        /* function that does not get parameters - and does  return value */
+        function f2() {
+            console.log(`I am f2`);
+            return "Hello from f2";
+        }
+
+        /* function that does get parameters - and does not return value */
+        function f3(num) {
+            console.log(`I am f3, and got: ${num}`);
+        }
+
+        /* function that does get parameters - and does  return value */
+        function f4(num) {
+            console.log(`I am f4, and got: ${num}`);
+            return `Hello from f4, that got: ${num}`;
+        }
+
+
+
+        /*
+        OUTPUT:
+        _______________________________
+            I am f1
+            f1 returned: undefined
+            I am f2
+            f2 returned: Hello from f2
+            I am f3, and got: 4
+            f3 returned: undefined
+            I am f4, and got: 5
+            f4 returned: Hello from f4, that got: 5
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
