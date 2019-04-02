@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+
+
+    var functionAfterMs=function(){ 
+        console.log(`in setTimeOut, time: ${Date.now()}`);
+    };
+
+    var ms=3000;
+
+    setTimeout(functionAfterMs,ms);
+
+    console.log(`End of code, time: ${Date.now()}`);
+    
+
+
+    /*
+    OUTPUT:
+    _________________________
+    
+    End of code, time: 1554201517836
+    in setTimeOut, time: 1554201520849
+
+    */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
