@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    var num1=Number(prompt("Enter num1:"));
+    var num2=Number(prompt("Enter num2:"));
+    var counter=0;
+
+    for(var i=1; i<=num2; i++){
+        setTimeout(
+            function(){
+                console.log(`mesage number ${counter++}`);
+            }
+            ,i*num1*1000)
+    }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
