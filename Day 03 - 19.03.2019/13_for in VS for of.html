@@ -8,24 +8,26 @@
     
     console.log("----------for-in----------")
     for(var e1 in arr){
-        arr[e1]="A";
+        console.log(e1);
     }
-    console.log(arr);
+
 
     console.log("----------for-of----------")
     for(var e2 of arr){
-        e2="B";
+        console.log(e2);
     }
-    console.log(arr);
 
     /*
     OUTPUT:
     ______________________
     ----------for-in----------
-    ["A", "A", "A"]
+    0
+    1
+    2
     ----------for-of----------
-    ["A", "A", "A"]
-    
+    a
+    b
+    c
     
     */
     </script>
