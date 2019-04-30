@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+      function rename(){
+          student.name="Charles"
+      }
+
+      var student={
+        "name":"Bob",
+        "age":12,
+        "sayHello":function(){console.log("hi");},
+        "incAge":function(){student.age++;},
+        "changeName":rename,
+        "family":{
+            "info":function(){console.log("best family");}
+        }
+      };
+
+      console.log(student.name);    //--> Bob
+      console.log(student.age);     //--> 12
+      student.sayHello();           //--> hi
+      student.incAge();
+      console.log(student.age);     //--> 13
+      student.changeName();
+      console.log(student.name);    //--> Charles
+      student.family.info();        //--> best family
+      </script>
+</head>
+<body>
+    
+</body>
+</html>
