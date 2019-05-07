@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var num1="";
+        var num2="";
+        var operation=undefined;
+
+        function handleNum(num){
+            if(operation!=null){
+                num2+=num;
+            }
+            else{
+                num1+=num;
+            }
+        }
+
+        function handleOperation(op){
+            if(op=="="){
+                var res=Number(num1) + (Number(num2)* ((operation=="-")?-1:1));
+                alert(`${num1} ${operation} ${num2} = ${res}`);
+                num1="";
+                num2="";
+                operation=undefined;
+            }
+            else{
+                operation=op;
+            }
+        }
+
+    </script>
+</head>
+<body>
+    
+
+    <button onclick="handleNum('1')"> 1 </button>
+    <button onclick="handleNum('2')"> 2 </button>
+    <button onclick="handleNum('3')"> 3 </button>
+
+    <button onclick="handleOperation('=')"> = </button>
+
+    <br/>
+
+    <button onclick="handleNum('4')"> 4 </button>
+    <button onclick="handleNum('5')"> 5 </button>
+    <button onclick="handleNum('6')"> 6 </button>
+
+    <button onclick="handleOperation('+')"> + </button>
+
+    <br/>
+
+
+    <button onclick="handleNum('7')"> 7 </button>
+    <button onclick="handleNum('8')"> 8 </button>
+    <button onclick="handleNum('9')"> 9 </button>
+
+    <button onclick="handleOperation('-')"> - </button>
+
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        var student={
+            "name":"Bob",
+            "age":12,
+            "isMale":true,
+            "hobbies":["Sport","Music", "Math"],
+            "address":{
+                "city":"TLV",
+                "country":"Israel",
+                "location":{
+                    "zip":"012453",
+                    "callingCode":"972"
+                }
+            }
+
+        };
+
+
+        console.log(student.address.location.zip);  //--> 012453
+        student.address.location.zip="999999";
+        console.log(student.address.location.zip);  //--> 999999
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

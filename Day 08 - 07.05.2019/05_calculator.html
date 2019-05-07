@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var num1="";
+        var num2="";
+        var operation=undefined;
+
+        function handleNum(num){
+            if(operation!=null){
+                num2+=num;
+            }
+            else{
+                num1+=num;
+            }
+        }
+
+        function handleOperation(op){
+            if(op=="="){
+                var res=Number(num1) + (Number(num2)* ((operation=="-")?-1:1));
+                alert(`${num1} ${operation} ${num2} = ${res}`);
+                num1="";
+                num2="";
+                operation=undefined;
+            }
+            else{
+                operation=op;
+            }
+        }
+
+        onload=function(){
+            var str="";
+            var arr=["=","+","-"];
+            
+            for(var i=0; i<9; i+=3){
+                for(var j=1; j<=3; j++){
+                    str+=`<button onclick="handleNum('${i+j}')"> ${i+j} </button>`;
+                }
+                str+=`<button onclick="handleOperation('${arr[i/3]}')"> ${arr[i/3]} </button><br/>`;
+            }
+            document.body.innerHTML=str;
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

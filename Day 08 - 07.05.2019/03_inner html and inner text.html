@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        #d1 {
+            background-color: red;
+        }
+
+        #d2 {
+            background-color: green;
+        }
+    </style>
+    <script>
+        function setText() {
+            var d1 = document.getElementById("d1");
+            var d2 = document.getElementById("d2");
+
+
+            d1.innerHTML = "what <br/> am i doing?";
+            d2.innerText = "what <br/> am i doing?";
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="d1">hello 1</h1>
+    <h1 id="d2">hello 2</h1>
+
+    <button onclick="setText()">click me</button>
+</body>
+
+</html>
