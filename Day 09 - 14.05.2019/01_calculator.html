@@ -7,7 +7,8 @@
         var operation=undefined;
 
         function handleNum(num){
-            if(operation!=undefined){
+            document.getElementById("screen").innerHTML+=num;
+            if(operation!=null){
                 num2+=num;
             }
             else{
@@ -17,13 +18,16 @@
 
         function handleOperation(op){
             if(op=="="){
+                document.getElementById("screen").innerHTML="";
                 var res=Number(num1) + (Number(num2)* ((operation=="-")?-1:1));
-                alert(`${num1} ${operation} ${num2} = ${res}`);
+                var str=`<li>${num1} ${operation} ${num2} = ${res}</li>`;
+                document.getElementById("res").innerHTML+=str;
                 num1="";
                 num2="";
                 operation=undefined;
             }
             else{
+                document.getElementById("screen").innerHTML+=op;
                 operation=op;
             }
         }
@@ -32,7 +36,7 @@
 </head>
 <body>
     
-
+    <div id="screen"> </div>
     <button onclick="handleNum('1')"> 1 </button>
     <button onclick="handleNum('2')"> 2 </button>
     <button onclick="handleNum('3')"> 3 </button>
@@ -57,5 +61,9 @@
     <button onclick="handleOperation('-')"> - </button>
 
     
+    <div>
+        <h1>History:</h1>
+        <ul id="res"></ul>
+    </div>
 </body>
 </html>
