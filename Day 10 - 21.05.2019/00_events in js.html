@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+      function func(lastEvent){
+          console.log(lastEvent.type,lastEvent.target.value);
+         
+
+      }
+  </script>
+</head>
+<body>
+    <input 
+        onblur="func(event)" 
+        onfocus="func(event)" 
+        onchange="func(event)" 
+        onkeyup="func(event)"
+    />
+</body>
+</html>

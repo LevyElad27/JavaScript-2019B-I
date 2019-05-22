@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function clickById(){
+            console.log("click by id");
+        }
+
+        function clickByClass(){
+            console.log("click by class");
+        }
+
+        function clickByTag(){
+            console.log("click by tag");
+        }
+
+        onload=function(){
+
+            var btnById=document.getElementById("first");
+            btnById.addEventListener("click",clickById);
+
+
+            var btnByClass=document.getElementsByClassName("second");
+            for(var btn of btnByClass){
+                btn.addEventListener("click",clickByClass);
+            }
+
+
+            var btnByTag=document.getElementsByTagName("button");
+            for(var btn of btnByTag){
+                btn.addEventListener("click",clickByTag);
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="first" class="second">button 1</button>
+    <button class="second">button 2</button>
+    <button>button 3</button>
+</body>
+</html>

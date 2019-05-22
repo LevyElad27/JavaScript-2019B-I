@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        onload=function(){
+            //------------------id-------------------------
+            var byId1=document.getElementById("best");
+            var byId2=document.getElementById("worst");
+
+            console.log(byId1);  //--> h1#best
+            console.log(byId2);  //--> null
+
+            //------------------class-------------------------
+            var byClass1=document.getElementsByClassName("first");
+            var byClass2=document.getElementsByClassName("last");
+
+            console.log(byClass1);  //--> [h1.first, p.first]
+            console.log(byClass2);  //--> []
+
+            //------------------tag-------------------------
+            var byTag1=document.getElementsByTagName("h1");
+            var byTag2=document.getElementsByTagName("p");
+            var byTag3=document.getElementsByTagName("ul");
+
+            console.log(byTag1);  //--> [h1#best, h1.first, h1, h1, best: h1#best]
+            console.log(byTag2);  //--> [p.first]
+            console.log(byTag3);  //--> []
+        };
+    </script>
+</head>
+<body>
+    <h1 id="best">line 1</h1>
+    <h1 class="first">line 2</h1>
+    <h1>line 3</h1>
+    <h1>line 4</h1>
+    <p class="first">line 5</p>
+</body>
+</html>

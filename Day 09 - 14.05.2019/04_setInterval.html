@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+        var interval;
+        var myDate=new Date();
+     
+
+        function startStoper(){
+            myDate.setHours(0);
+            myDate.setSeconds(0);
+            myDate.setMinutes(0);
+            
+            interval=setInterval(setTime,1000);       
+        }
+
+        function stopStoper(){
+            clearInterval(interval);
+        }
+
+        function setTime(){
+            myDate.setSeconds(myDate.getSeconds()+1);
+            document.getElementById("res").innerHTML=`
+                <h1> 
+                    ${myDate.getHours()}:${myDate.getMinutes()}:${myDate.getSeconds()}
+                </h1>`;
+        }
+        
+    </script>
+</head>
+<body>
+    <div id="res"></div>
+
+    <button onclick="startStoper()">start stoper</button>
+    <button onclick="stopStoper()">stop stoper</button>
+</body>
+</html>
