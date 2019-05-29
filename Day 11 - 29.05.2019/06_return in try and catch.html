@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function getDescription(x) {
+            console.log("Before try catch");
+            try {
+                return x.toString();  // --> this line is not executed - becuse it contains error 
+            }
+            catch (err) {
+                return err;
+            }
+            console.log("After try catch");
+        }
+
+        console.log("--------------first call---------------");
+        var res1=getDescription([1,2,3]);
+        console.log(`--------------res: ${res1}`);
+
+
+        console.log("--------------second call---------------");
+        var res2=getDescription(null);
+        console.log(`--------------res: ${res2}`);
+
+
+
+        /*
+        OUTPUT:
+        ___________________________________
+
+        --------------first call---------------
+        Before try catch
+        --------------res: 1,2,3
+        
+        --------------second call---------------
+        Before try catch
+        --------------res: TypeError: Cannot read property 'toString' of null
+        
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

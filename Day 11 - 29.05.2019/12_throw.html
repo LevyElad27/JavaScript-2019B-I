@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        function isAgeValid(age) {  
+            console.log("START - isAgeValid");
+
+            if (age < 0 || age > 120)
+                throw new Error();
+            
+            console.log("END - isAgeValid");
+        }
+
+        function checkAge(age) {  
+            console.log("START - checkAge");
+
+            try {
+                isAgeValid(age);
+                console.log(age + " is OK");
+            }
+            catch (err) {
+                console.log(age + " is not OK");
+            }
+
+            console.log("END - checkAge");
+        }
+
+        console.log("----------------first call------------------");
+        checkAge(130);
+
+
+        console.log("----------------second call------------------");
+        checkAge(100);
+
+
+
+        /*
+        OUTPUT:
+        _________________________________
+        
+        ----------------first call------------------
+        START - checkAge
+        START - isAgeValid
+        130 is not OK
+        END - checkAge
+        ----------------second call------------------
+        START - checkAge
+        START - isAgeValid
+        END - isAgeValid
+        100 is OK
+        END - checkAge
+     */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

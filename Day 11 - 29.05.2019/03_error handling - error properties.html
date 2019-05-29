@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+       var x=null;
+       
+       console.log("Start");
+       
+       try{
+        console.log(x.toString());  // --> this line is not executed - becuse it contains error 
+       }
+       catch(err){
+           console.log(err.message)
+       }
+       
+
+       console.log("End");  
+
+       /*
+       OUTPUT:
+       _____________________________
+
+       Start
+       Cannot read property 'toString' of null
+       End
+
+       */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

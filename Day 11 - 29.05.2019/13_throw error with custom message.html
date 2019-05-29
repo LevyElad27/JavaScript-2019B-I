@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+           function isAgeValid(age) {  
+            if (age < 0 )
+                throw new Error("Min age is 0");
+            if (age > 120 )
+                throw new Error("Max age is 120");
+        }
+
+        function checkAge(age) {  
+            try {
+                isAgeValid(age);
+                console.log(age + " is OK");
+            }
+            catch (err) {
+                console.log(err.message);
+            }
+        }
+
+        console.log("----------------first call------------------");
+        checkAge(130);
+
+
+        console.log("----------------second call------------------");
+        checkAge(-4);
+
+
+        console.log("----------------third call------------------");
+        checkAge(100);
+
+        /*
+         OUTPUT:
+         _____________________________________
+
+            ----------------first call------------------
+            Max age is 120
+            ----------------second call------------------
+            Min age is 0
+            ----------------third call------------------
+            100 is OK
+        */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

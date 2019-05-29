@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        function isAgeValid(age) {
+            if (age < 0 || age > 120)
+                throw new Error();
+        }
+
+        console.log("Start");
+
+        try{
+            isAgeValid(130);
+            console.log("age is OK");
+        }
+        catch(err){
+            console.log("age is not OK");
+        }    
+
+        console.log("End");  
+
+
+        /*
+        OUTPUT:
+        ______________________________
+
+        Start
+        age is not OK
+        End
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

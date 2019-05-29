@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+
+       var x=null;
+       
+       console.log("Start");
+
+       console.log(x.toString());  
+
+       console.log("End");  // --> this line is not executed - becuse we had uncaught error before this line
+
+       /*
+       OUTPUT:
+       _____________________________
+
+       Start
+       Uncaught TypeError: Cannot read property 'toString' of null
+
+       */
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

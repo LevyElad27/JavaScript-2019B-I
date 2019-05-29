@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function getDescription(x) {
+            var num=1;
+            console.log(`Before try catch, num is: ${num}`);
+            
+            try {
+                return `try returned, num is: ${num}`;  // --> this line is not executed - becuse it contains error 
+            }
+            catch (err) {
+                return `catch returned, num is: ${num}`;
+            }
+            finally{
+                num++;
+                console.log(`in finally, num is: ${num}`);
+            }
+        }
+
+        console.log("--------------first call---------------");
+        var res1=getDescription([1,2,3]);
+        console.log(`--------------res: ${res1}`);
+
+        console.log("--------------second call---------------");
+        var res2=getDescription(null);
+        console.log(`--------------res: ${res2}`);
+
+
+
+        /*
+        OUTPUT:
+        ___________________________________
+        --------------first call---------------
+        Before try catch, num is: 1
+        in finally, num is: 2
+        --------------res: try returned, num is: 1
+
+        --------------second call---------------
+        Before try catch, num is: 1
+        in finally, num is: 2
+        --------------res: try returned, num is: 1
+
+        */
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
