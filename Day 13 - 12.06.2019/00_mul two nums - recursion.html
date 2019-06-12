@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+        /*Mul 2 numbers - without "*" operation , and without loop */
+
+
+        function mul(num1, num2) {
+            if (num2 == 1)
+                return num1;
+            return num1+mul(num1, num2-1);
+        }
+
+        console.log(mul(3,4));  //--> 12
+        console.log(mul(5,7));  //--> 35
+
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

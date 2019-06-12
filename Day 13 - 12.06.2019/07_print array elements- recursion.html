@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function printArr(arr, len) {            
+            if (len!=1){
+                printArr(arr, len-1)
+            }  
+            console.log(arr[len-1]);
+        }
+
+        printArr([1,3,7,9],4);      //--> 1 3 7 9
+        printArr(["A","K","p"],3);  //--> A K p
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

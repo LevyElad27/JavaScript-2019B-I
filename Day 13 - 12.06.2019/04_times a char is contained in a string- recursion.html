@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        function charCounter(str, len, char) {
+            var isEqual=(str[len-1] == char)?1:0;
+            
+            if (len == 1)
+                return isEqual;
+            return isEqual+charCounter(str, len - 1, char);
+        }
+        console.log(charCounter("Hello", 5, "C"));  //--> 0
+        console.log(charCounter("Car", 3, "C"));  //--> 1
+        console.log(charCounter("aCaCCr", 6, "C"));  //--> 3
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

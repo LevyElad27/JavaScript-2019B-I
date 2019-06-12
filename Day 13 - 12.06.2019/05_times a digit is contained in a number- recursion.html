@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        function digitCounter(num, digit) {
+            var isEqual=(num%10 == digit)?1:0;
+            
+            if (num<10)
+                return isEqual;
+            return isEqual+digitCounter(Math.floor(num/10), digit);
+        }
+        console.log(digitCounter(426, 4));  //--> 1
+        console.log(digitCounter(454674,4));  //--> 3
+        console.log(digitCounter(99,4));  //--> 0
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

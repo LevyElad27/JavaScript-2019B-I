@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function printArrMax(arr, len) {    
+          if(len==1)
+            return arr[0];
+          
+          res=printArrMax(arr, len-1);
+          return (arr[len-1]>res) ? arr[len-1]:res;
+        }
+
+        console.log(printArrMax([1,3,7,9],4));       //--> 9 
+        console.log(printArrMax([1,99,7,9],4));      //--> 99 
+
+    </script>
+</head>
+
+<body></body>
+
+</html>

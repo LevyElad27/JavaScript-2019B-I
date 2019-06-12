@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script>
+
+        function containsChar(str, len, char) {
+            if (len == 1)
+                return str[0] == char;
+            if (str[len - 1] == char)
+                return true;
+            return containsChar(str, len - 1, char);
+        }
+
+        console.log(containsChar("Hello", 5, "C"));  //--> false
+        console.log(containsChar("Car", 3, "C"));  //--> true
+        console.log(containsChar("aCar", 4, "C"));  //--> true
+
+    </script>
+</head>
+
+<body></body>
+
+</html>
