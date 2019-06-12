@@ -92,8 +92,6 @@
 │   └── BasicEventsInJS.pdf
 ├── Day 11 
 │   ├── Error handling (try, catch, finally)
-├── Day 12
-│   ├── OOP in JS
 
 ```
 ### Note:
